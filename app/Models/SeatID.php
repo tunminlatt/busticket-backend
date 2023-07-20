@@ -13,6 +13,8 @@ class SeatID extends Model
 
     protected $fillable = ['seating_plan_id', 'seat_number', 'is_available'];
 
+    protected $hidden = ['created_at', 'updated_at'];
+
     protected $casts = [
         'is_available' => 'boolean',
     ];

@@ -11,6 +11,8 @@ class Destination extends Model
 
     protected $fillable = ['name', 'is_available'];
 
+    protected $hidden = ['created_at', 'updated_at'];
+
     protected $casts = [
         'is_available' => 'boolean',
     ];

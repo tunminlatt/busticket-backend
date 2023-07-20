@@ -11,6 +11,9 @@ class SeatingPlan extends Model
 
     protected $fillable = ['bus_id', 'row', 'column'];
 
+    protected $hidden = ['created_at', 'updated_at'];
+    
+
     // Relationship with the Bus model
     public function bus()
     {

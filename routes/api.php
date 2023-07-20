@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\API\BusController;
+use App\Http\Controllers\API\BookingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/buses', [BusController::class, 'index']);
+Route::get('/buses/{bus}', [BusController::class, 'show']);
+Route::post('/booking', [BookingController::class, 'create']);

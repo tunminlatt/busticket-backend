@@ -11,6 +11,8 @@ class Booking extends Model
 
     protected $fillable = ['bus_id', 'seat_ids', 'passenger_name', 'passenger_email', 'passenger_phone'];
 
+    protected $hidden = ['created_at', 'updated_at'];
+
     protected static function boot()
     {
         parent::boot();

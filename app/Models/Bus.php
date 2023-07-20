@@ -11,6 +11,8 @@ class Bus extends Model
 
     protected $fillable = ['name', 'model', 'seating_capacity', 'from', 'to'];
 
+    protected $hidden = ['created_at', 'updated_at'];
+    
     public function seatingPlan()
     {
         return $this->hasOne(SeatingPlan::class);
